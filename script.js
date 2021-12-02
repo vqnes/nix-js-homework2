@@ -301,7 +301,7 @@ l: for (let i = 2; i <= rightInterval; i++) {
     let sqrt = Math.sqrt(i);
     let ceilSqrt = Math.ceil(sqrt);
     if (ceilSqrt === sqrt) {
-        ceilSqrt = ++sqrt;
+        continue;
     }
 
     for (j = 2; j < ceilSqrt; j++) {
