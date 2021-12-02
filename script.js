@@ -295,16 +295,20 @@ do {
 Для n = 10 результат должен быть 2,3,5,7.
 P.S. Код также должен легко модифицироваться для любых других интервалов.
 */
-let rightInterval = 30;
+let rightInterval = 100;
 
-l: for (let i = 2; i <= rightInterval; i++) {
+if (rightInterval >= 2) {
+    console.log(2);
+}
+
+l: for (let i = 3; i <= rightInterval; i += 2) {
     let sqrt = Math.sqrt(i);
     let ceilSqrt = Math.ceil(sqrt);
     if (ceilSqrt === sqrt) {
         continue;
     }
 
-    for (j = 2; j < ceilSqrt; j++) {
+    for (j = 3; j < ceilSqrt; j += 2) {
         if (i % j === 0) {
             continue l;
         }
